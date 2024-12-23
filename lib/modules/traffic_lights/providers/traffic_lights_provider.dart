@@ -55,7 +55,6 @@ class TrafficLightsNotifier extends StateNotifier<List<TrafficLight>> {
       list.add(
         TrafficLight(
           color: TrafficColor.red,
-          isOn: false,
         ),
       );
       final randomDelay = Duration(
@@ -66,7 +65,6 @@ class TrafficLightsNotifier extends StateNotifier<List<TrafficLight>> {
         final list = [...state];
         list[i] = list[i].copyWith(
           color: list[i].color,
-          isOn: true,
         );
         state = list;
         runColor(i);
